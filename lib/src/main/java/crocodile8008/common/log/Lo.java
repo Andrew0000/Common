@@ -1,6 +1,7 @@
 package crocodile8008.common.log;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 @SuppressWarnings("unused, WeakerAccess")
@@ -8,7 +9,7 @@ public class Lo {
 
     private static String tag = "Logger";
     private static boolean enabled;
-    private static LogListener externalListener;
+    @Nullable private static LogListener externalListener;
 
     public static void init(boolean enabled, @NonNull String tag) {
         Lo.enabled = enabled;
