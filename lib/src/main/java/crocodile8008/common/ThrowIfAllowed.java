@@ -6,7 +6,7 @@ import android.support.annotation.NonNull;
  * Created by Andrei Riik in 11.05.2017.
  */
 
-@SuppressWarnings("unused")
+@SuppressWarnings("unused, WeakerAccess")
 public class ThrowIfAllowed {
 
     private static boolean failEnabled;
