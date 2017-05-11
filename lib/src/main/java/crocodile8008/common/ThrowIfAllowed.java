@@ -14,7 +14,7 @@ public class ThrowIfAllowed {
     /**
      * Just invoke this with actual BuildConfig.DEBUG value.
      */
-    public static void setFailEnabled(boolean failEnabled) {
+    public static void setFailAllowed(boolean failEnabled) {
         ThrowIfAllowed.failEnabled = failEnabled;
     }
 
