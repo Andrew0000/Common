@@ -26,13 +26,20 @@ public class TimeMeter {
     }
 
     /**
+     * See {@link #logCurrent(String, String)}
+     */
+    public static void logCurrent(@NonNull String sectionName) {
+        logCurrent(sectionName, null);
+    }
+
+    /**
      * Log current time diff for given key if exist.
      */
     public static void logCurrent(@NonNull String sectionName, @Nullable String label) {
         Long start = inProgress.get(sectionName);
         if (start != null) {
             String time = String.valueOf(nowMillis() - start);
-            Log.d(TAG, label == null ? time : label + " " + time);
+            Log.d(TAG, sectionName + ": " + (label == null ? time : label + " " + time));
         }
     }
 
@@ -43,7 +50,8 @@ public class TimeMeter {
     public static void endSection(@NonNull String sectionName) {
         Long start = inProgress.remove(sectionName);
         if (start != null) {
-            Log.d(TAG, String.valueOf(nowMillis() - start));
+            String time = String.valueOf(nowMillis() - start);
+            Log.d(TAG, sectionName + ": " + time);
         }
     }
 
