@@ -12,7 +12,6 @@ import android.support.annotation.NonNull;
 public class ThreadUtil {
 
     /**
-     *
      * @return {@code true} if current thread is main, {@code false} otherwise.
      */
     public static boolean isMainThread() {
