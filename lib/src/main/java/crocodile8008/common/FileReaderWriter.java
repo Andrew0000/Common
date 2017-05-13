@@ -70,10 +70,21 @@ public class FileReaderWriter {
     }
 
     /**
-     * Read string from given file.
+     * Read bytes from given file and return new {@link String} from this bytes or {@code null}.
+     */
+    @Nullable
+    public static String readFullString(@NonNull File file) throws IOException {
+        byte[] bytes = readFromDisc(file);
+        return bytes == null ? null : new String(bytes);
+    }
+
+    /**
+     * Read string from given file by lines.
+     * Note: any '\n' characters will be lost with this method.
+     * See {@link BufferedReader#readLine()}
      */
     @NonNull
-    public static String readString(@NonNull File file) throws IOException {
+    public static String readStringByLines(@NonNull File file) throws IOException {
         InputStream is = null;
         InputStreamReader isReader = null;
         BufferedReader br = null;

@@ -43,12 +43,12 @@ public class FileReaderWriterTest {
 
         String string1 = "First string";
         FileReaderWriter.writeString(string1, file);
-        String read1 = FileReaderWriter.readString(file);
+        String read1 = FileReaderWriter.readStringByLines(file);
         Assert.assertEquals(string1, read1);
 
-        String string2 = "Second string";
+        String string2 = "Second\nstring\n";
         FileReaderWriter.writeString(string2, file);
-        String read2 = FileReaderWriter.readString(file);
+        String read2 = FileReaderWriter.readFullString(file);
         Assert.assertEquals(string2, read2);
     }
 
