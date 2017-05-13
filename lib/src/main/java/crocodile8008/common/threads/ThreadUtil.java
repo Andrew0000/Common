@@ -1,4 +1,4 @@
-package crocodile8008.common;
+package crocodile8008.common.threads;
 
 import android.os.Handler;
 import android.os.Looper;

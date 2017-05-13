@@ -1,7 +1,6 @@
 package crocodile8008.lib;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assume.*;
 
 import org.junit.Assert;
 import org.junit.Assume;
@@ -14,8 +13,8 @@ import java.util.concurrent.Future;
 import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.TimeUnit;
 
-import crocodile8008.common.SingleBackgroundThread;
-import crocodile8008.common.SingleBackgroundThread.ExceptionCallback;
+import crocodile8008.common.threads.SingleBackgroundThread;
+import crocodile8008.common.threads.SingleBackgroundThread.ExceptionCallback;
 
 /**
  * Tests for {@link SingleBackgroundThread}

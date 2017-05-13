@@ -1,4 +1,4 @@
-package crocodile8008.common;
+package crocodile8008.common.threads;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
