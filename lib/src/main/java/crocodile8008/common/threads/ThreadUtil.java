@@ -25,9 +25,7 @@ public class ThreadUtil {
         FinalHolder.handler.post(task);
     }
 
-    /**
-     * Initialization-on-demand holder
-     */
+    // Initialization-on-demand holder
     private static class FinalHolder {
         static final Handler handler = new Handler(Looper.getMainLooper());
     }
