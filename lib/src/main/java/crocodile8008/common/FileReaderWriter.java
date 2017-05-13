@@ -27,7 +27,7 @@ public class FileReaderWriter {
     /**
      * Write given bytes in to given file.
      */
-    public static void writeToDisc(@NonNull File file, @NonNull byte[] bytes) throws IOException {
+    public static void writeToDisc(@NonNull byte[] bytes, @NonNull File file) throws IOException {
         BufferedOutputStream bos = null;
         try {
             bos = new BufferedOutputStream(new FileOutputStream(file));
