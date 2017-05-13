@@ -22,7 +22,13 @@ public class ThreadUtil {
      * Post given task in ui thread handler.
      */
     public static void postOnUi(@NonNull Runnable task) {
-        Handler handler = new Handler(Looper.getMainLooper());
-        handler.post(task);
+        FinalHolder.handler.post(task);
+    }
+
+    /**
+     * Initialization-on-demand holder
+     */
+    private static class FinalHolder {
+        static final Handler handler = new Handler(Looper.getMainLooper());
     }
 }
