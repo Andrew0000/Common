@@ -1,11 +1,12 @@
 package crocodile8008.common;
 
-import android.support.annotation.NonNull;
+import crocodile8008.common.annotations.ParametersNonnullByDefault;
 
 /**
  * Created by Andrei Riik in 11.05.2017.
  */
 
+@ParametersNonnullByDefault
 @SuppressWarnings("unused, WeakerAccess")
 public class ThrowIfAllowed {
 
@@ -21,7 +22,7 @@ public class ThrowIfAllowed {
     /**
      * Throws given exception if allowed, do nothing otherwise.
      */
-    public static void runtime(@NonNull RuntimeException exception) {
+    public static void runtime(RuntimeException exception) {
         if (failEnabled) {
             throw exception;
         }
